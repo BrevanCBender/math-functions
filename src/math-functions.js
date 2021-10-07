@@ -55,7 +55,11 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    const sum3 = a + b + c;
+    const prod3 = a * b * c;
+    const strp = `${a} and ${b} and ${c} sum to ${sum3}.`;
+    const str = `The product of ${a} and ${b} and ${c} is ${prod3}.`;
+    return [sum3, prod3, strp, str];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
