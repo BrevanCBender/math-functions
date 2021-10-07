@@ -29,8 +29,8 @@ Write a function called multiply() that takes in two numbers as arguments and re
 
 export function multiply(a, b) {
     const prod = a * b;
-    const str = `The product of ${a} and ${b} is ${prod}.`;
-    return [prod, str];
+    const str2 = `The product of ${a} and ${b} is ${prod}.`;
+    return [prod, str2];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -54,12 +54,14 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-    const sum3 = a + b + c;
-    const prod3 = a * b * c;
-    const strp = `${a} and ${b} and ${c} sum to ${sum3}.`;
-    const str = `The product of ${a} and ${b} and ${c} is ${prod3}.`;
-    return [sum3, prod3, strp, str];
+export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line   
+    //const sumAB = sum(a, b)[0];
+    const sumABC = sum(sum(a, b)[0], c)[0];
+    //const prodAB = multiply(a, b);
+    const prodABC = multiply(multiply(a, b)[0], c)[0];
+    const strp = `${a} and ${b} and ${c} sum to ${sumABC}.`;
+    const str3 = `The product of ${a} and ${b} and ${c} is ${prodABC}.`;
+    return [sumABC, prodABC, strp, str3];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -81,7 +83,9 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    const arrSum = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0];
+    const str4 = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${arrSum} is their sum.`;
+    return [arrSum, str4]
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
