@@ -78,14 +78,14 @@ this example and uses the values that were input into the function:
 
 IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. 
 To do addition, use your sum() function that you've already created. You're going to 
-have to be resourceful to figure out how to do this. However, you may continue 
+have2 to be resourceful to figure out how to do this. However, you may continue 
 to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
     const arrSum = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0];
     const str4 = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${arrSum} is their sum.`;
-    return [arrSum, str4]
+    return [arrSum, str4];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -108,7 +108,9 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    const prodArr = multiply(multiply(multArr[0], multArr[1])[0], multArr[2])[0];
+    const str5 = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${prodArr}.`;
+    return [prodArr, str5]; 
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
